@@ -1,0 +1,144 @@
+
+body{
+    background-color:white;
+    color: black;
+    }
+
+/* Bordered form */
+form{
+    border:3px solid f1f1f1 ;
+    
+    
+}
+/* inputs */
+input[type=text], input[type=password]{
+   width:30% ;
+   padding: 12px 20 px; 
+   margin: 8px 0 ;   
+   display: inline-block;
+   border: 1px solid #ccc ;
+    box-sizing: border-box;
+    display: block;
+    box-sizing: border-box;
+}
+/* button style*/
+button{
+    background-color:#4CAF50 ;
+    color: white;
+    padding: 14px 20px ;
+    margin: 8px 0 ;
+    border: none ;
+    cursor: pointer;
+    width: 30% ;
+    
+}
+
+/* cancel button */
+.cancelbtn{
+  width: 30%;
+    padding: 10px 18px;
+    background-color: #f44336;  
+    
+    
+    
+}
+/* image containerlogin */
+imagecontainer_login{
+    text-align: center;
+    margin: 24px 0 12px 0;
+    
+    
+}
+
+
+/*img.avatar*/
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+    padding-left: 55px;
+    
+}
+/* container*/
+.container{
+    
+   padding: 16px; 
+    
+    
+}
+/*forgot password*/
+span.psw{
+   float:none;
+    padding: 16px;
+    
+    
+}
+#login_btn{
+    display: block;
+    
+}
+
+
+
+
+
+#about_us{
+    float:left;
+    
+}
+
+
+
+
+main {
+    margin-left:  200px;
+    
+    
+}
+spacing { 
+    margin-top: 100px;
+    background-color: white;
+    margin-bottom: 100px;
+    
+}
+ .card {
+box-shadow: 0 4px 8px 0 seagreen;
+transition: 0.3s;
+width: 300px;
+height: 300px;
+border-radius: 5px;
+float: left;
+margin-right: 30px;
+}
+
+.card:hover{
+box-shadow:  0 8px 16px 0 green;
+
+}
+#card-image {
+border-radius: 5px 5px 0 0;
+width: 300px;
+height: 150;
+
+}
+
+.card-container{
+margin-left: 15px;    
+padding-bottom: 15px;
+font-size: 90%;
+}
+
+
+.slider-container{
+position: center;
+padding-bottom: 100px;
+ min-height: 500px;
+ max-width: 800px;
+
+}
+
+.myslide{
+   display: none;
+  max-width: 100%;
+  max-height: 480px;
+}
+

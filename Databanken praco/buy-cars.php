@@ -1,0 +1,76 @@
+<?php 
+	ob_start();
+	require_once "Dbconnect.php";
+	session_start();
+
+	$sql = "SELECT Cars.car_id AS 'Car_id', Cars.model AS 'Model', Cars.brand AS 'Brand', Cars.car_condition AS 'Condition', Cars.engine_type AS 'Engine Type',Cars.man_year AS Man_year,for_sale_cars.sale_price AS 'Price' FROM for_sale_cars JOIN Cars ON for_sale_cars.car_id = Cars.car_id";
+	$result = mysqli_query($conn ,$sql);
+	$num_rows = mysqli_num_rows($result);
+	echo "<br>";
+	echo $sql;
+
+	echo "$num_rows";
+
+?>
+<head>
+	
+	<style>
+		#result_table{
+			font-family: arial,sans-serif;
+			border-collapse: collapse;
+		}
+		td,th{
+			border :1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+		tr:nth-child(even){
+			background-color: #dddddd;
+		}
+		.table_container{
+			margin-left: 250px;
+		}
+	</style>
+</head>
+<?php include'header.php'; ?>
+<?php include'menu.php'; ?>
+<?php include'sidemenu.php'; ?>
+
+	<?php if ($result): ?>
+		<?php if($num_rows!= 0): ?>
+			<div class = 'table_container'>
+				<table id='result_table'>
+					<tr>
+						<th>Car ID</th>
+						<th>Model</th>
+						<th>Brand</th>
+						<th>Year of Manufacture</th>
+						<th>Condition</th>
+						<th>Engine type</th>
+						<th>price</th>
+					</tr>					
+			<?php while($data = mysqli_fetch_array($result)): ?>
+						<tr>
+							<td><?php echo $data['Car_id']; ?></td>
+							<td><?php echo $data['Model'];?></td>
+							<td><?php echo $data['Brand'] ;?></td>
+							<td><?php echo $data['Man_year'];?></td>
+							<td><?php echo $data['Condition'];?></td>
+							<td><?php echo $data['Engine Type'];?></td>
+							<td><?php echo $data['Price'];?></td>
+							<td><a href="buyvehicle.php?car_id=<?php echo $data['Car_id'];?>">Buy this Car now.</a></td>
+						</tr>
+			<?php endwhile ?>
+				</table>
+			</div>
+			<?php mysqli_free_result($result);?>
+		<?php else: ?>
+			<span style="padding-left: 20px;">No records found!</span>			
+		<?php endif ?>	
+
+	<?php else: ?>
+		<span style="padding-left: 20px;">ERROR could not excute query!</span>
+
+	<?php endif	?>
+
+<?php include'footer.php'; ?>

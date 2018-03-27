@@ -19,7 +19,7 @@
 </head>
 <body>
     
-    <header>Welcome to Never Go Solo CarCenter testing git
+    <header>Welcome to Never Go Solo CarCenter
     <?php if (isset($_SESSION['user'])): ?>
        <span style="float: right; font-size: 70%;">Welcome <?php echo $_SESSION['username']?></span><br>
         <span style="float: right;font-size: 70%;"><a href="logout.php">Sign out</a></span>

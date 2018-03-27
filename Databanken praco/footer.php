@@ -12,7 +12,7 @@ footer{
     color:white;
     width: 100%;
     text-align: center;
-    padding-left: 10px;
+    padding-left: 11px;
     display: block;
     position:absolute;
     right: 0;

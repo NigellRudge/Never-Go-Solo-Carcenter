@@ -19,4 +19,4 @@ In phase 3 we will transition this application to a **Single Page Application **
 
 ### Phase 4:
 
-In this phase the application will be made into a mobile application. We will decide at a later date if we will  use a Hybrid framework like **Ionic(2+)** or frameworks like **Nativescript**, **ReactNative** , **Flutter** or **Xamarin**. We also have the choice to go full native but this seem a bit too time consuming.
+In this phase the application will be made into a mobile application. We will decide at a later date if we will  use a Hybrid framework like **Ionic(2+)** or frameworks like **Nativescript**, **ReactNative** , **Flutter** or **Xamarin**. We also have the choice to go full native but this seems a bit too time consuming.
